@@ -43,7 +43,6 @@ function showCategory(){
         };
     
 }
-
 function addToCart(btn){
     let addItem = btn.parentElement.parentElement.getElementsByTagName('h2')[0].getAttribute('data-name'); //on récupère le nom de l'article
     let cartContent= document.getElementById('cartContent'); // ciblage de la modal
