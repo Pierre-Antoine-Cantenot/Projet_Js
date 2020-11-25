@@ -9,9 +9,9 @@ body {
     background-image : url("");
     background-attachment: fixed;
 }
-.page{
-    background-color: white;
-}
+html {
+    scroll-behavior: smooth;
+  }
 /* nav */
 .logoBike{
     height: 100px;
@@ -19,6 +19,7 @@ body {
 }
 #Navbar {
     background-color: rgba(223, 155, 28, 0.596);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     
 }
 .shoppingCart{
@@ -67,4 +68,10 @@ body {
     width: 5%;
     display: inline-block;
     text-align: center;
+}
+.footerLinkList a:before{
+    content: "|";
+}
+#firstLink:before{
+    content: none;
 }
