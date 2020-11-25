@@ -1,0 +1,19 @@
+body {
+    background-image : url("https://images4.alphacoders.com/155/thumb-1920-155836.jpg");
+}
+.logoBike{
+    height: 100px;
+    width: auto;
+}
+#Navbar {
+    background-color: rgba(223, 155, 28, 0.596);
+    
+}
+
+.card {
+    background-color: rgba(190, 140, 48, 0.548);
+}
+.card-header {
+    color: tomato;
+    font-size: x-large;
+}
