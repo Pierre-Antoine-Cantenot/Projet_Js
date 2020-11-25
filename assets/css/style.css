@@ -2,6 +2,9 @@
 height: 350px;
 width: 350px;
 }
+/* #vtt, #bmx, #electrique, #route{
+    display: none;
+} */
 body {
     background-image : url("https://images4.alphacoders.com/155/thumb-1920-155836.jpg");
     background-attachment: fixed;
@@ -57,4 +60,11 @@ body {
 
 .carouselButton:hover {
     background-color: rgba(0, 0, 0, 0.822);
+}
+.itemQuantity{
+    border: solid 1px orange;
+    border-radius: 2px;
+    width: 5%;
+    display: inline-block;
+    text-align: center;
 }
