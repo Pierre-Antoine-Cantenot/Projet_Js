@@ -2,3 +2,59 @@
 height: 350px;
 width: 350px;
 }
+body {
+    background-image : url("https://images4.alphacoders.com/155/thumb-1920-155836.jpg");
+    background-attachment: fixed;
+}
+.page{
+    background-color: white;
+}
+/* nav */
+.logoBike{
+    height: 100px;
+    width: auto;
+}
+#Navbar {
+    background-color: rgba(223, 155, 28, 0.596);
+    
+}
+.shoppingCart{
+    color: black;
+    font-weight: bold;
+    border-radius: 0%;
+}
+/* card */
+.card {
+    background-color: transparent;
+}
+.card-header {
+    color: tomato;
+    font-size: x-large;
+}
+
+
+/* carousel */ 
+#carouselRow{
+    background-color: white;
+}
+.carouselText {
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.carouselText, .carouselButton, .carouselControl {
+ display: none;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+.carouselButton {
+    background-color: rgba(0, 0, 0, 0.616);
+    border-radius: 0px;
+}
+
+.carouselButton:hover {
+    background-color: rgba(0, 0, 0, 0.822);
+}
