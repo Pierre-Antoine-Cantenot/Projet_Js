@@ -7,20 +7,21 @@
     <link rel="icon" type="image/png" href="assets/img/logobike.svg" />
     <link rel="stylesheet" type="text/css" href="assets/css/boostrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title>La Roue Tourne</title>
 </head>
 
 <body>
     <nav id="Navbar" class="navbar navbar-expand-lg bg-light navbar-light sticky-top">
-        <a class="navbarBrand" href="index.html"><img id="logoBike" src="assets/img/logobike.svg" alt=""
-                height="65"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="navbarBrand ml-auto mr-lg-auto" href="index.html"><img id="logoBike" src="assets/img/logobike.svg" alt=""
+                height="65"></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto h3">
-                <li class="nav-item text-right">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Accueil</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -45,7 +46,7 @@
     </nav>
     <!-- Modal -->
     <div class="modal fade" id="modalShoppingCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Votre panier</h5>
@@ -192,8 +193,8 @@
                             <li>Freins à disques hydrauliques</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">449.95 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="449.95">449.95 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-5 d-flex flex-column justify-content-between">
@@ -218,8 +219,8 @@
                             <li>Freins à disques hydrauliques</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">399.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="399.99">399.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -244,8 +245,8 @@
                             <li>Jantes 27,5 aluminium double parois</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">499.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="499.99">499.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -270,8 +271,8 @@
                             <li>Freins à disques hydrauliques</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">299.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="299.99">299.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -296,8 +297,8 @@
                             <li>Freins à disques mécaniques</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">289.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="289.99">289.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
             </div>
@@ -330,8 +331,8 @@
                     </div>
                     <div class="text-center">
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">199.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="199.99">199.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-5 d-flex flex-column justify-content-between">
@@ -354,8 +355,8 @@
                             <li>Freins Tektro 2 doigts Aluminium</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">289.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="289.99">289.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-5 d-flex flex-column justify-content-between">
@@ -379,8 +380,8 @@
                             <li>Pédalier 3 pièces 8 Cannelures 170mm boitier MID BB 19mm</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">279.95 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="279.95">279.95 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -407,8 +408,8 @@
                             <li>Jantes Aluminum 20" 36h</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">199.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="199.99">199.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -433,8 +434,8 @@
                             <li>Roue arrière RADIO “Rookie” rim</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">359.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="359.99">359.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -460,8 +461,8 @@
                             <li>Poids 11.35kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">299.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="299.99">299.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
             </div>
@@ -497,8 +498,8 @@
                     </div>
                     <div class="text-center">
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">369.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="369.99">369.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-5 d-flex flex-column justify-content-between">
@@ -525,8 +526,8 @@
                             <li>Poids 25.6 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">449.95 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="449.99">449.95 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-5 d-flex flex-column justify-content-between">
@@ -553,8 +554,8 @@
                             <li>Poids 23.7 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">399.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="399.99">399.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -581,8 +582,8 @@
                             <li>Poids 24.8 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">499.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="499.99">499.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -609,8 +610,8 @@
                             <li>poids 23.9 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">279.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="279.99">279.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -637,8 +638,8 @@
                             <li>Poids 25.4 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">289.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="289.99">289.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
             </div>
@@ -673,8 +674,8 @@
                     </div>
                     <div class="text-center">
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">369.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="369.99">369.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-5 d-flex flex-column justify-content-between">
@@ -700,8 +701,8 @@
                             <li>Poids 11.2 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">449.95 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="449.95">449.95 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-5 d-flex flex-column justify-content-between">
@@ -727,8 +728,8 @@
                             <li>Poids 8.90 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">559.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="559.99">559.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -755,8 +756,8 @@
                             <li>Poids 10.8 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">499.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="499.99">499.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -783,8 +784,8 @@
                             <li>Poids 9.9 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">279.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="279.99">279.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
                 <div class="col-lg-4 my-5 d-flex flex-column justify-content-between">
@@ -810,28 +811,32 @@
                             <li>Poids 11.2 kg</li>
                         </ul>
                         <span class="badge badge-primary mb-4">Prix TTC : </span><span
-                            class="ml-2 font-weight-bold h3">289.99 €</span>
-                        <Button class="btn btn-block btn-warning font-weight-bold">Ajouter au panier</Button>
+                            class="ml-2 font-weight-bold h3 price" data-price="289.99">289.99 €</span>
+                        <Button class="btn btn-block btn-warning font-weight-bold" onclick="addToCart(this)">Ajouter au panier</Button>
                     </div>
                 </div>
             </div>
+            <div>
+                <i class="fas fa-3x fa-arrow-circle-up arrowTop" onclick="scrollTopPage()"></i>
+            </div>
             <!-- Footer -->
-            <div id="hLine" class="bg-secondary col-lg-12 pt-4"></div>
+            <div id="hLine" class="bg-secondary col-lg-12 pt-4">
             <footer id="footer" class="page-footer col-lg-12 font-small blue pt-4">
                 <div class="footer text-center py-3">
                     <div class="row">
-                        <p class="text-center col-12">© 2020 Copyright:</p>
-                        <a class="text-center col-12" href="index.html" title="https://larouetourne.com">LaRoueTourne.com</a>
+                        <p class="text-center text-light col-12">© 2020 Copyright:</p>
+                        <a class="text-center text-light col-12" href="index.html" title="https://larouetourne.com">LaRoueTourne.com</a>
                         <div class="col-12 footerLinkList pt-2 pb-2">
-                            <a id="firstLink" href="#">Conditions générales de vente </a>
-                            <a href="#">Confidentialité</a>
-                            <a href="#">Mentions légales</a>
-                            <a href="#">Cookies</a>
-                            <a href="#">Contacts</a>
+                            <a id="firstLink" href="#" class="text-light ">Conditions générales de vente </a>
+                            <a href="#" class="text-light ">Confidentialité</a>
+                            <a href="#" class="text-light ">Mentions légales</a>
+                            <a href="#" class="text-light ">Cookies</a>
+                            <a href="#" class="text-light ">Contacts</a>
                         </div>
                     </div>
                 </div>
             </footer>
+        </div>
         </div>
     </div>
 

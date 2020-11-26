@@ -1,10 +1,18 @@
 .bikeSize{
-height: 350px;
-width: 350px;
+    height: 340px;
+    width: 340px;
 }
-/* #vtt, #bmx, #electrique, #route{
-    display: none;
-} */
+.arrowTop{
+    position: fixed;
+    bottom: 128px;
+    right: 10px;
+    color: rgba(255, 166, 0, 0.384);
+    cursor: pointer;
+    }
+    .arrowTop:hover{
+    color: rgb(255, 166, 0);
+    transition: 0.5s;
+    }
 body {
     background-image : url("");
     background-attachment: fixed;
@@ -14,7 +22,7 @@ html {
   }
 /* nav */
 .logoBike{
-    height: 100px;
+    height: 10%;
     width: auto;
 }
 #Navbar {

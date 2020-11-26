@@ -45,13 +45,23 @@ function showCategory() {
 
 }
 
+// FLECHE TOP
+let btnToTop = document.getElementById('btnTop');
+function scrollTopPage() {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+};
+
 //panier
 // les articles dans le panier sont sous la forme NOM_REF_NB_PRIX
 let products = [];
 
 // ajouter au panier
 function addToCart(btn) {
-    let item = btn.parentElement.parentElement.getElementsByTagName('h2')[0].getAttribute('data-name'); //on récupère le nom de l'article
+    let item = btn.parentElement.parentElement.getElementsByTagName('h2')[0].textContent; //on récupère le nom de l'article
     let reference = btn.parentElement.parentElement.getElementsByClassName('reference')[0].textContent; //récupération de la ref article
     let price = btn.parentElement.getElementsByClassName('price')[0].getAttribute('data-price'); // récupération du prix de l'article
     let productInCart = false;
