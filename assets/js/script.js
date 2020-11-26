@@ -2,17 +2,21 @@
 const carouselIntroduction = document.getElementById('carouselExampleIndicators');
 let carouselText = document.querySelectorAll('.carouselText');
 let carouselButton = document.querySelectorAll('.carouselButton');
+//Variable des chaques éléments
 
 function setCarouselItemVisibility(show) {
     for (let i = 0; i < carouselText.length; i++) {
         carouselText[i].style.display = show;
     }
+    //Boucle pour carouselText
 
     for (let i = 0; i < carouselButton.length; i++) {
         carouselButton[i].style.display = show;
     }
+    //Boucle pour carouselButton
 }
 
+//Parametre show
 carouselIntroduction.addEventListener('mouseenter', () => {
     setCarouselItemVisibility('block');
 });
@@ -69,8 +73,10 @@ function addToCart(btn) {
     // vérifie si le produit est déjà dans le panier
     for (let i = 0; i < products.length; i++) {
         if (products[i].split('_')[1] === reference) {
-            productInCart = true; // le produit est dans le panier
-            let splitted = products[i].split('_'); // découpe et stock chaque élément du produit (nom, ref, nb, prix)
+            productInCart = true;
+            // le produit est dans le panier
+            let splitted = products[i].split('_');
+            // découpe et stock chaque élément du produit (nom, ref, nb, prix)
             products[i] = splitted[0] + '_' + splitted[1] + '_' + (parseFloat(splitted[2]) + 1) + '_' + splitted[3];
         }
     }
@@ -85,18 +91,21 @@ function addToCart(btn) {
 
 // Met à jour la modal du panier
 function updateCart() {
-    let cartContent = document.getElementById('cartContent'); // ciblage du contenu de la modal
+    let cartContent = document.getElementById('cartContent');
+    // ciblage du contenu de la modal
     cartContent.innerHTML = '';
     let totalPrice = 0;
     for (let i = 0; i < products.length; i++) {
-        let splitted = products[i].split('_'); 
-        totalPrice += splitted[2] * splitted[3]; //Ajout du prix des articles fois la quantité, dans le total 
-        cartContent.innerHTML += splitted[0] + ' : ' + splitted[1] + '<button data-ref="' + splitted[1] + '" onclick="addItem(this, -1)" class="btn">-</button><p class="itemQuantity">' + splitted[2] + '</p><button data-ref="' + splitted[1] + '" onclick="addItem(this, 1)" class="btn">+</button><p>' + (splitted[2] * splitted[3]).toFixed(2) + '€'; // création de la ligne produit dans la modal (nom, ref, boutons, quantité, prix)
+        let splitted = products[i].split('_');
+        totalPrice += splitted[2] * splitted[3];
+        //Ajout du prix des articles fois la quantité, dans le total 
+        cartContent.innerHTML += splitted[0] + ' : ' + splitted[1] + '<button data-ref="' + splitted[1] + '" onclick="addItem(this, -1)" class="btn">-</button><p class="itemQuantity">' + splitted[2] + '</p><button data-ref="' + splitted[1] + '" onclick="addItem(this, 1)" class="btn">+</button><p>' + (splitted[2] * splitted[3]).toFixed(2) + '€';
+        // création de la ligne produit dans la modal (nom, ref, boutons, quantité, prix)
     }
     cartContent.innerHTML += '<p>Total : ' + totalPrice.toFixed(2) + '€</p>';
 }
 
-// boutons + et -
+// Fonction boutons + et -
 function addItem(btn, amount) {
     let reference = btn.getAttribute('data-ref');
 
