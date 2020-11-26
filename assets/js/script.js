@@ -109,3 +109,4 @@ function addItem(btn, amount) {
 
     updateCart();
 }
+
